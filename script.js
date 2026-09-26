@@ -244,7 +244,7 @@
 (() => {
   if (document.querySelector('script[data-portfolio-enhancements]')) return;
   const s = document.createElement('script');
-  s.src = 'enhancements.js?v=20260926-sinax-brand-2';
+  s.src = 'enhancements.js?v=20260926-sinax-brand-3';
   s.defer = true;
   s.dataset.portfolioEnhancements = 'true';
   document.head.appendChild(s);
