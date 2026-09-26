@@ -68,8 +68,8 @@
       socials.className = 'hero-socials';
       socials.setAttribute('aria-label', 'حساباتي على مواقع التواصل');
       socials.innerHTML = `
-        <a href="https://www.instagram.com/rad_03i" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 2A3.76 3.76 0 0 0 4 7.75v8.5A3.76 3.76 0 0 0 7.75 20h8.5A3.76 3.76 0 0 0 20 16.25v-8.5A3.76 3.76 0 0 0 16.25 4h-8.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.25-3.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z"/></svg>
+        <a href="https://t.me/DVDRH" target="_blank" rel="noopener noreferrer" aria-label="Telegram" title="Telegram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71l-4.14-3.06-2 1.93c-.23.23-.42.42-.82.42z"/></svg>
         </a>
         <a href="https://www.facebook.com/rad03e" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 22v-8h2.75l.41-3.2H13.5V8.76c0-.93.26-1.56 1.59-1.56h1.7V4.34c-.29-.04-1.3-.12-2.47-.12-2.44 0-4.11 1.49-4.11 4.23v2.35H7.45V14h2.76v8h3.29Z"/></svg>
@@ -244,7 +244,7 @@
 (() => {
   if (document.querySelector('script[data-portfolio-enhancements]')) return;
   const s = document.createElement('script');
-  s.src = 'enhancements.js?v=20260926-sinax-brand-3';
+  s.src = 'enhancements.js?v=20260927-telegram-1';
   s.defer = true;
   s.dataset.portfolioEnhancements = 'true';
   document.head.appendChild(s);

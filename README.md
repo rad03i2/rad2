@@ -10,7 +10,7 @@ Official portfolio repository for **Radwan Abdulhadi**, featuring software proje
 
 - Website: https://rdwan.dev/
 - GitHub: https://github.com/rad03i2
-- Instagram: https://www.instagram.com/rad_03i
+- Telegram: https://t.me/DVDRH
 - Facebook: https://www.facebook.com/rad03e
 - Profile page: https://rdwan.dev/about-radwan-abdulhadi.html
 - Project directory: https://rdwan.dev/projects/
