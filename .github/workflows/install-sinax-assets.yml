@@ -1,0 +1,38 @@
+name: Install SINAX brand assets
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/install-sinax-assets.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build transparent SINAX assets
+        shell: bash
+        run: |
+          mkdir -p assets/images
+          cat .tmp-sinax/icon-*.txt | tr -d '\n\r ' | base64 -d > assets/images/sinax-icon.webp
+          cat .tmp-sinax/word-*.txt | tr -d '\n\r ' | base64 -d > assets/images/sinax-wordmark.webp
+          file assets/images/sinax-icon.webp assets/images/sinax-wordmark.webp
+          test -s assets/images/sinax-icon.webp
+          test -s assets/images/sinax-wordmark.webp
+          rm -rf .tmp-sinax
+
+      - name: Commit assets
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A assets/images/sinax-icon.webp assets/images/sinax-wordmark.webp .tmp-sinax
+          git diff --cached --quiet && exit 0
+          git commit -m "Add high-quality SINAX brand assets"
+          git push
