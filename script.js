@@ -277,7 +277,7 @@
 (() => {
   if (document.querySelector('script[data-portfolio-enhancements]')) return;
   const s = document.createElement('script');
-  s.src = 'enhancements.js?v=20260928-slow-stats-1';
+  s.src = 'enhancements.js?v=20260928-remove-sort-1';
   s.defer = true;
   s.dataset.portfolioEnhancements = 'true';
   document.head.appendChild(s);
