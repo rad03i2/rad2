@@ -140,21 +140,41 @@
   }
 })();
 
-// Project showcase: 20 ordered images, Arabic descriptions, GitHub buttons, and show more.
+// Project showcase: 40 projects, repository-native covers/logos, Arabic descriptions, GitHub buttons, and staged reveal.
 (() => {
   'use strict';
 
   const section = document.getElementById('projects');
   if (!section) return;
 
-  if (!document.querySelector('link[href="projects.css"]')) {
+  if (!document.querySelector('link[href^="projects.css"]')) {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = 'projects.css';
+    link.href = 'projects.css?v=20260928-projects-40-1';
     document.head.appendChild(link);
   }
 
   const projects = [
+    ["21","VisionGuard","منظومة مراقبة فيديو محلية تجمع كشف الأجسام والتتبع وتحليل المناطق والتنبيهات.",["Python","YOLO","FastAPI","OpenCV"],"VisionGuard","https://raw.githubusercontent.com/rad03i2/VisionGuard/main/assets/project-cover.svg","https://raw.githubusercontent.com/rad03i2/VisionGuard/main/assets/project-logo.svg","NEW 01",true],
+    ["22","OCR Desk","أداة OCR محلية لتحويل صور المستندات إلى نصوص ومخرجات قابلة للبحث بعدة لغات.",["Python","Tesseract","OCR","PDF"],"ocr-desk","https://raw.githubusercontent.com/rad03i2/ocr-desk/main/assets/project-cover.svg","https://raw.githubusercontent.com/rad03i2/ocr-desk/main/assets/project-logo.svg","NEW 02",true],
+    ["23","DocuMind-RAG","محرك استرجاع مستندات محلي يجمع البحث الكثيف والنصي ويعيد المقاطع مع مصادر واضحة.",["Python","FastAPI","RAG","Search"],"DocuMind-RAG","https://raw.githubusercontent.com/rad03i2/DocuMind-RAG/main/assets/project-cover.svg","https://raw.githubusercontent.com/rad03i2/DocuMind-RAG/main/assets/project-logo.svg","NEW 03",true],
+    ["24","Photo Sorter AI","منظم صور محلي يعتمد بيانات EXIF والتشابه الإدراكي مع خطة معاينة قبل أي نقل أو نسخ.",["Python","Pillow","EXIF","pHash"],"photo-sorter-ai","https://raw.githubusercontent.com/rad03i2/photo-sorter-ai/main/assets/project-cover.svg","https://raw.githubusercontent.com/rad03i2/photo-sorter-ai/main/assets/project-logo.svg","NEW 04",true],
+    ["25","CloudPulse Dashboard","لوحة مراقبة ذاتية الاستضافة لصحة الخدمات وزمن الاستجابة ومعدلات الخطأ والتنبيهات.",["TypeScript","Node.js","Telemetry","Dashboard"],"CloudPulse-Dashboard","https://raw.githubusercontent.com/rad03i2/CloudPulse-Dashboard/main/assets/project-cover.svg","https://raw.githubusercontent.com/rad03i2/CloudPulse-Dashboard/main/assets/project-logo.svg","NEW 05",true],
+    ["26","FilePilot","أداة تنظيم ملفات محلية قابلة للتراجع تعتمد التخطيط والمعاينة قبل تنفيذ النقل.",["Python","Files","CLI","Undo"],"filepilot","https://raw.githubusercontent.com/rad03i2/filepilot/main/assets/filepilot-brand-cover.svg","https://raw.githubusercontent.com/rad03i2/filepilot/main/assets/filepilot-logo-square.svg","NEW 06",true],
+    ["27","PDFCraft","ورشة PDF محلية للدمج والتقسيم والاستخراج والتدوير والتشفير والعلامات المائية.",["Python","PDF","pypdf","CLI"],"pdfcraft","https://raw.githubusercontent.com/rad03i2/pdfcraft/main/assets/project-cover.svg","https://raw.githubusercontent.com/rad03i2/pdfcraft/main/assets/project-logo.svg","NEW 07",true],
+    ["28","Media Transcoder","طبقة تحكم محلية فوق FFmpeg لتحويل الفيديو والصوت وفحصهما ومعالجة المجلدات.",["Python","FFmpeg","Video","Audio"],"media-transcoder","https://raw.githubusercontent.com/rad03i2/media-transcoder/main/assets/project-cover.svg","https://raw.githubusercontent.com/rad03i2/media-transcoder/main/assets/project-logo.svg","NEW 08",true],
+    ["29","Duplicate Hunter","كاشف ملفات مكررة يتحقق من المحتوى فعليًا ويعتمد المعاينة قبل العزل دون حذف تلقائي.",["Python","SHA-256","Files","CLI"],"duplicate-hunter","https://raw.githubusercontent.com/rad03i2/duplicate-hunter/main/assets/project-cover.svg","https://raw.githubusercontent.com/rad03i2/duplicate-hunter/main/assets/project-logo.svg","NEW 09",true],
+    ["30","Backup Sentinel","نسخ احتياطية محلية بلقطات مستقلة مع تحقق SHA-256 واستعادة محمية.",["Python","Backup","SHA-256","CLI"],"backup-sentinel","https://raw.githubusercontent.com/rad03i2/backup-sentinel/main/assets/project-cover.svg","https://raw.githubusercontent.com/rad03i2/backup-sentinel/main/assets/project-logo.svg","NEW 10",true],
+    ["31","ImageOptimizer","أداة محلية لضغط الصور وتحويل الصيغ وتغيير الأبعاد ومعالجة المجلدات بأمان.",["Python","Pillow","WebP","Images"],"imageoptimizer","https://raw.githubusercontent.com/rad03i2/imageoptimizer/main/assets/project-cover.svg","https://raw.githubusercontent.com/rad03i2/imageoptimizer/main/assets/project-logo.svg","NEW 11",true],
+    ["32","Smart Compressor","أداة أرشفة محلية لضغط الملفات وفحص الحزم وفكها بأمان باستخدام مكتبة Python القياسية.",["Python","ZIP","TAR","Archives"],"smart-compressor","https://raw.githubusercontent.com/rad03i2/smart-compressor/main/assets/project-cover.svg","https://raw.githubusercontent.com/rad03i2/smart-compressor/main/assets/project-logo.svg","NEW 12",true],
+    ["33","Robotics Language Lab","مختبر روبوتات متعدد اللغات للتحكم والملاحة والحساسات والأنظمة المضمنة والقياس عن بُعد.",["Python","C++","ROS 2","Arduino"],"robotics-language-lab","https://raw.githubusercontent.com/rad03i2/robotics-language-lab/main/assets/project-cover.svg","https://raw.githubusercontent.com/rad03i2/robotics-language-lab/main/assets/project-logo.svg","NEW 13",true],
+    ["34","MCP Toolbox","خادم MCP محلي صغير يوفر أدوات مطور محددة من دون وصول للملفات أو Shell أو الشبكة.",["Python","MCP","FastMCP","Developer Tools"],"mcp-toolbox","https://raw.githubusercontent.com/rad03i2/mcp-toolbox/main/assets/project-cover.svg","https://raw.githubusercontent.com/rad03i2/mcp-toolbox/main/assets/project-logo.svg","NEW 14",true],
+    ["35","Invoice Maker Lite","أداة فواتير محلية تحفظ السجلات في SQLite وتحسب المبالغ بدقة وتصدر HTML وJSON.",["Python","SQLite","HTML","Invoices"],"invoice-maker-lite","https://raw.githubusercontent.com/rad03i2/invoice-maker-lite/main/assets/project-cover.svg","https://raw.githubusercontent.com/rad03i2/invoice-maker-lite/main/assets/project-logo.svg","NEW 15",true],
+    ["36","API Mock Studio","خادم HTTP وهمي محلي يولّد استجابات حتمية من تعريفات JSON لتطوير الواجهات والاختبارات.",["Python","HTTP","API","JSON"],"api-mock-studio","https://raw.githubusercontent.com/rad03i2/api-mock-studio/main/assets/project-cover.svg","https://raw.githubusercontent.com/rad03i2/api-mock-studio/main/assets/project-logo.svg","NEW 16",true],
+    ["37","LLM Cost Tracker","أداة محلية لحساب تكلفة رموز نماذج اللغة وتسجيل الاستخدام وتحليل الإنفاق والميزانية.",["Python","LLM","JSONL","Costs"],"llm-cost-tracker","https://raw.githubusercontent.com/rad03i2/llm-cost-tracker/main/assets/project-cover.svg","https://raw.githubusercontent.com/rad03i2/llm-cost-tracker/main/assets/project-logo.svg","NEW 17",true],
+    ["38","Codebase Navigator AI","أداة محلية لفهرسة المستودعات واكتشاف رموز Python والبحث وقراءة سياق الكود دون تنفيذه.",["Python","AST","Code Search","CLI"],"codebase-navigator-ai","https://raw.githubusercontent.com/rad03i2/codebase-navigator-ai/main/assets/project-cover.svg","https://raw.githubusercontent.com/rad03i2/codebase-navigator-ai/main/assets/project-logo.svg","NEW 18",true],
+    ["39","Privacy Audit","ماسح خصوصية محلي للقراءة فقط يكشف مؤشرات البيانات الحساسة قبل مشاركة الملفات أو نشر المستودع.",["Python","Privacy","Security","CLI"],"privacy-audit","https://raw.githubusercontent.com/rad03i2/privacy-audit/main/assets/project-cover.svg","https://raw.githubusercontent.com/rad03i2/privacy-audit/main/assets/project-logo.svg","NEW 19",true],
+    ["40","Phishing URL Checker","محلل روابط تصيد محلي وقابل للتفسير يفحص بنية URL دون زيارة الوجهة أو إرسال الرابط لخدمة خارجية.",["Python","Security","URLs","CLI"],"phishing-url-checker","https://raw.githubusercontent.com/rad03i2/phishing-url-checker/main/assets/project-cover.svg","https://raw.githubusercontent.com/rad03i2/phishing-url-checker/main/assets/project-logo.svg","NEW 20",true],
     ['01', 'Smart File Manager', 'برنامج Windows لإدارة الملفات، إعادة التسمية الجماعية، وفحص التكرار.', ['C#', 'WinUI 3', '.NET'], 'SmartFileManager'],
     ['02', 'Robotics Language Lab', 'مختبر روبوتات متعدد اللغات يجمع التحكم، الملاحة، والحساسات.', ['Python', 'C++', 'ROS 2'], 'robotics-language-lab'],
     ['03', 'Python Toolbox', 'مجموعة أدوات Python عملية للملفات، النصوص، والفحص السريع.', ['Python', 'CLI', 'Automation'], 'python-toolbox'],
@@ -175,14 +195,17 @@
     ['18', 'Developer Portfolio', 'موقع شخصي متجاوب يعرض الهوية، المهارات، والمشاريع المختارة.', ['HTML', 'CSS', 'JavaScript'], 'developer-portfolio'],
     ['19', 'Portfolio', 'واجهة شخصية لعرض أعمال الويب والحاسوب والهاتف بصورة مرتبة.', ['HTML', 'CSS', 'JavaScript'], 'portfolio'],
     ['20', 'RAD / Main Portfolio', 'الموقع الرئيسي لعرض الهوية، SINAX، والمشاريع بواجهة ثنائية اللغة.', ['Portfolio', 'Projects', 'RAD'], 'rad']
-  ].map(([number, name, description, tags, repo]) => ({
+  ].map(([number, name, description, tags, repo, image = '', icon = '', badge = '', isNew = false]) => ({
     number,
     name,
     description,
     tags,
     repo,
     github: `https://github.com/rad03i2/${repo}`,
-    image: `assets/images/projects/project-${number}.webp`
+    image: image || `assets/images/projects/project-${number}.webp`,
+    icon,
+    badge: badge || `PROJECT ${number}`,
+    isNew: Boolean(isNew)
   }));
 
   const githubIcon = `
@@ -191,14 +214,15 @@
     </svg>`;
 
   const cards = projects.map((project, index) => `
-    <article class="showcase-card ${index >= 10 ? 'is-extra' : ''}">
+    <article class="showcase-card ${project.isNew ? 'is-new-project' : 'is-legacy-project'} ${index >= 10 ? 'is-staged-hidden' : ''}" data-project-number="${project.number}">
       <a class="showcase-image-link" href="${project.github}" target="_blank" rel="noopener noreferrer" aria-label="${project.name}">
-        <img src="${project.image}" alt="${project.name}" loading="lazy" decoding="async">
-        <span class="showcase-number">PROJECT ${project.number}</span>
+        <img class="showcase-cover-image" src="${project.image}" alt="${project.name}" loading="lazy" decoding="async">
+        <span class="showcase-number">${project.badge}</span>
       </a>
       <div class="showcase-content">
-        <div class="showcase-title-row">
-          <h3>${project.name}</h3>
+        <div class="showcase-title-row ${project.icon ? 'has-project-icon' : ''}">
+          ${project.icon ? `<span class="showcase-project-icon" aria-hidden="true"><img src="${project.icon}" alt="" loading="lazy" decoding="async"></span>` : ''}
+          <div class="showcase-title-copy"><h3>${project.name}</h3>${project.isNew ? '<span class="showcase-new-pill">NEW</span>' : ''}</div>
           <a class="github-icon-button" href="${project.github}" target="_blank" rel="noopener noreferrer" aria-label="GitHub - ${project.name}">${githubIcon}</a>
         </div>
         <p>${project.description}</p>
@@ -220,7 +244,7 @@
       <div class="projects-showcase-grid" id="projectsShowcaseGrid">${cards}</div>
       <div class="projects-more-wrap">
         <button class="projects-more-button" id="projectsMoreButton" type="button" aria-expanded="false">
-          <span class="projects-more-label">عرض المزيد</span>
+          <span class="projects-more-label" data-i18n="showMore">عرض المزيد</span>
           <span class="projects-more-count">+10</span>
         </button>
       </div>
@@ -230,13 +254,22 @@
   const grid = document.getElementById('projectsShowcaseGrid');
   const button = document.getElementById('projectsMoreButton');
   if (grid && button) {
+    const PAGE_SIZE = 10;
+    let visibleCount = PAGE_SIZE;
+    const applyStage = () => {
+      const allCards = Array.from(grid.querySelectorAll('.showcase-card'));
+      allCards.forEach((card, index) => card.classList.toggle('is-staged-hidden', index >= visibleCount));
+      const remaining = Math.max(0, allCards.length - visibleCount);
+      button.hidden = remaining === 0;
+      button.setAttribute('aria-expanded', String(visibleCount > PAGE_SIZE));
+      const count = button.querySelector('.projects-more-count');
+      if (count) count.textContent = remaining ? `+${Math.min(PAGE_SIZE, remaining)}` : '';
+    };
     button.addEventListener('click', () => {
-      const expanded = grid.classList.toggle('show-all');
-      button.setAttribute('aria-expanded', String(expanded));
-      button.querySelector('.projects-more-label').textContent = expanded ? 'عرض أقل' : 'عرض المزيد';
-      button.querySelector('.projects-more-count').textContent = expanded ? '−10' : '+10';
-      if (!expanded) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      visibleCount = Math.min(projects.length, visibleCount + PAGE_SIZE);
+      applyStage();
     });
+    applyStage();
   }
 })();
 
@@ -244,7 +277,7 @@
 (() => {
   if (document.querySelector('script[data-portfolio-enhancements]')) return;
   const s = document.createElement('script');
-  s.src = 'enhancements.js?v=20260927-telegram-1';
+  s.src = 'enhancements.js?v=20260928-projects-40-1';
   s.defer = true;
   s.dataset.portfolioEnhancements = 'true';
   document.head.appendChild(s);

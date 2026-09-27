@@ -311,3 +311,25 @@ html,body{max-width:100%;overflow-x:hidden}html{scroll-padding-top:76px}body{pad
     transition:none!important;
   }
 }
+
+
+/* PROJECTS-40: repository-native covers + project logos + 10-by-10 staged reveal */
+.showcase-card.is-staged-hidden{display:none}
+.projects-showcase-grid.show-all .showcase-card.is-staged-hidden{display:block}
+.showcase-card.is-new-project{border-color:rgba(198,241,108,.19);background:linear-gradient(150deg,rgba(198,241,108,.055),rgba(255,255,255,.025)),rgba(6,12,24,.76)}
+.showcase-card.is-new-project:hover{border-color:rgba(198,241,108,.38)}
+.showcase-card.is-new-project .showcase-image-link{aspect-ratio:16/7;background:linear-gradient(135deg,rgba(6,10,14,.96),rgba(16,21,18,.94));display:grid;place-items:center}
+.showcase-card.is-new-project .showcase-image-link .showcase-cover-image{width:100%;height:100%;object-fit:contain;object-position:center;transform:none!important;filter:none!important}
+.showcase-card.is-new-project:hover .showcase-image-link .showcase-cover-image{transform:none!important;filter:none!important}
+.showcase-title-row.has-project-icon{align-items:center;gap:13px}
+.showcase-project-icon{width:58px;height:58px;flex:0 0 58px;display:grid;place-items:center;overflow:hidden;border-radius:16px;border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.045);box-shadow:0 10px 28px rgba(0,0,0,.22)}
+.showcase-project-icon img{display:block;width:100%;height:100%;object-fit:contain}
+.showcase-title-copy{min-width:0;flex:1}
+.showcase-title-copy h3{margin:0}
+.showcase-new-pill{display:inline-flex;margin-top:5px;padding:4px 7px;border:1px solid rgba(198,241,108,.28);border-radius:999px;background:rgba(198,241,108,.08);color:var(--lime);font:700 9px/1 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.08em}
+.showcase-card.is-new-project .showcase-number{border-color:rgba(198,241,108,.32);background:rgba(9,13,10,.72);color:#ddff9c}
+.projects-more-button[hidden]{display:none!important}
+@media(max-width:760px){
+  .showcase-card.is-new-project .showcase-image-link{aspect-ratio:16/7!important}
+  .showcase-project-icon{width:52px;height:52px;flex-basis:52px;border-radius:14px}
+}

@@ -524,3 +524,8 @@ html{scroll-behavior:smooth}html.enh-light{--bg:#f4f6ef;--surface:#fff;--text:#1
 @media(prefers-reduced-motion:reduce){
   .enh-service-tab,.enh-service-stage-copy,.enh-service-watermark,.enh-service-stage::before,.enh-service-stage-glow{transition:none!important}
 }
+
+
+/* PROJECTS-40 modal media: show repository-native artwork without cropping */
+.enh-modal.is-new-project-modal .enh-modal-media{background:linear-gradient(135deg,rgba(7,10,8,.96),rgba(18,22,18,.96))}
+.enh-modal.is-new-project-modal .enh-modal-image{object-fit:contain!important;object-position:center!important;background:transparent}

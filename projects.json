@@ -1,25 +1,679 @@
 {
-  "version": 1,
+  "version": 2,
   "projects": [
-    {"number":"01","name":"Smart File Manager","repo":"SmartFileManager","categories":["windows","tools"],"tags":["C#","WinUI 3",".NET"]},
-    {"number":"02","name":"Robotics Language Lab","repo":"robotics-language-lab","categories":["robotics","tools"],"tags":["Python","C++","ROS 2"]},
-    {"number":"03","name":"Python Toolbox","repo":"python-toolbox","categories":["python","tools"],"tags":["Python","CLI","Automation"]},
-    {"number":"04","name":"JavaScript Lab","repo":"javascript-lab","categories":["web"],"tags":["JavaScript","HTML","CSS"]},
-    {"number":"05","name":"AI Tools Lab","repo":"ai-tools-lab","categories":["ai","python","web"],"tags":["Python","JavaScript","AI"]},
-    {"number":"06","name":"Desktop Automation Suite","repo":"desktop-automation-suite","categories":["windows","automation","tools"],"tags":["PowerShell","C#","AutoHotkey"]},
-    {"number":"07","name":"Windows System Toolkit","repo":"windows-system-toolkit","categories":["windows","tools"],"tags":["Windows","PowerShell","C#"]},
-    {"number":"08","name":"Arabic UI Components","repo":"arabic-ui-components","categories":["web"],"tags":["RTL","HTML","CSS"]},
-    {"number":"09","name":"Student Management System","repo":"student-management-system","categories":["desktop","data"],"tags":["Java","SQL","OOP"]},
-    {"number":"10","name":"File Processing Toolkit","repo":"file-processing-toolkit","categories":["python","tools","automation"],"tags":["Python","C#","Bash"]},
-    {"number":"11","name":"IoT Sensor Dashboard","repo":"iot-sensor-dashboard","categories":["iot","web","data"],"tags":["Arduino","Node.js","IoT"]},
-    {"number":"12","name":"Data Analysis Notebooks","repo":"data-analysis-notebooks","categories":["data","python"],"tags":["Python","CSV","Analysis"]},
-    {"number":"13","name":"Web Security Lab","repo":"web-security-lab","categories":["web","security"],"tags":["PHP","JavaScript","Security"]},
-    {"number":"14","name":"Mobile App Starter Kit","repo":"mobile-app-starter-kit","categories":["mobile"],"tags":["Kotlin","Android","Python"]},
-    {"number":"15","name":"C++ Algorithms Lab","repo":"cpp-algorithms-lab","categories":["cpp","tools"],"tags":["C++","CMake","Algorithms"]},
-    {"number":"16","name":"Python Automation Hub","repo":"python-automation-hub","categories":["python","automation"],"tags":["Python","Automation","CLI"]},
-    {"number":"17","name":"Fullstack Mini Projects","repo":"fullstack-mini-projects","categories":["web","data"],"tags":["PHP","JavaScript","SQL"]},
-    {"number":"18","name":"Developer Portfolio","repo":"developer-portfolio","categories":["web"],"tags":["HTML","CSS","JavaScript"]},
-    {"number":"19","name":"Portfolio","repo":"portfolio","categories":["web"],"tags":["HTML","CSS","JavaScript"]},
-    {"number":"20","name":"RAD / Main Portfolio","repo":"rad","categories":["web"],"tags":["Portfolio","Projects","RAD"],"demo":true}
+    {
+      "number": "21",
+      "name": "VisionGuard",
+      "repo": "VisionGuard",
+      "categories": [
+        "ai",
+        "python",
+        "security",
+        "data"
+      ],
+      "tags": [
+        "Python",
+        "YOLO",
+        "FastAPI",
+        "OpenCV"
+      ],
+      "image": "https://raw.githubusercontent.com/rad03i2/VisionGuard/main/assets/project-cover.svg",
+      "icon": "https://raw.githubusercontent.com/rad03i2/VisionGuard/main/assets/project-logo.svg",
+      "badge": "NEW 01",
+      "new": true
+    },
+    {
+      "number": "22",
+      "name": "OCR Desk",
+      "repo": "ocr-desk",
+      "categories": [
+        "python",
+        "tools"
+      ],
+      "tags": [
+        "Python",
+        "Tesseract",
+        "OCR",
+        "PDF"
+      ],
+      "image": "https://raw.githubusercontent.com/rad03i2/ocr-desk/main/assets/project-cover.svg",
+      "icon": "https://raw.githubusercontent.com/rad03i2/ocr-desk/main/assets/project-logo.svg",
+      "badge": "NEW 02",
+      "new": true
+    },
+    {
+      "number": "23",
+      "name": "DocuMind-RAG",
+      "repo": "DocuMind-RAG",
+      "categories": [
+        "ai",
+        "python",
+        "data"
+      ],
+      "tags": [
+        "Python",
+        "FastAPI",
+        "RAG",
+        "Search"
+      ],
+      "image": "https://raw.githubusercontent.com/rad03i2/DocuMind-RAG/main/assets/project-cover.svg",
+      "icon": "https://raw.githubusercontent.com/rad03i2/DocuMind-RAG/main/assets/project-logo.svg",
+      "badge": "NEW 03",
+      "new": true
+    },
+    {
+      "number": "24",
+      "name": "Photo Sorter AI",
+      "repo": "photo-sorter-ai",
+      "categories": [
+        "ai",
+        "python",
+        "tools"
+      ],
+      "tags": [
+        "Python",
+        "Pillow",
+        "EXIF",
+        "pHash"
+      ],
+      "image": "https://raw.githubusercontent.com/rad03i2/photo-sorter-ai/main/assets/project-cover.svg",
+      "icon": "https://raw.githubusercontent.com/rad03i2/photo-sorter-ai/main/assets/project-logo.svg",
+      "badge": "NEW 04",
+      "new": true
+    },
+    {
+      "number": "25",
+      "name": "CloudPulse Dashboard",
+      "repo": "CloudPulse-Dashboard",
+      "categories": [
+        "web",
+        "data"
+      ],
+      "tags": [
+        "TypeScript",
+        "Node.js",
+        "Telemetry",
+        "Dashboard"
+      ],
+      "image": "https://raw.githubusercontent.com/rad03i2/CloudPulse-Dashboard/main/assets/project-cover.svg",
+      "icon": "https://raw.githubusercontent.com/rad03i2/CloudPulse-Dashboard/main/assets/project-logo.svg",
+      "badge": "NEW 05",
+      "new": true
+    },
+    {
+      "number": "26",
+      "name": "FilePilot",
+      "repo": "filepilot",
+      "categories": [
+        "python",
+        "automation",
+        "tools"
+      ],
+      "tags": [
+        "Python",
+        "Files",
+        "CLI",
+        "Undo"
+      ],
+      "image": "https://raw.githubusercontent.com/rad03i2/filepilot/main/assets/filepilot-brand-cover.svg",
+      "icon": "https://raw.githubusercontent.com/rad03i2/filepilot/main/assets/filepilot-logo-square.svg",
+      "badge": "NEW 06",
+      "new": true
+    },
+    {
+      "number": "27",
+      "name": "PDFCraft",
+      "repo": "pdfcraft",
+      "categories": [
+        "python",
+        "tools"
+      ],
+      "tags": [
+        "Python",
+        "PDF",
+        "pypdf",
+        "CLI"
+      ],
+      "image": "https://raw.githubusercontent.com/rad03i2/pdfcraft/main/assets/project-cover.svg",
+      "icon": "https://raw.githubusercontent.com/rad03i2/pdfcraft/main/assets/project-logo.svg",
+      "badge": "NEW 07",
+      "new": true
+    },
+    {
+      "number": "28",
+      "name": "Media Transcoder",
+      "repo": "media-transcoder",
+      "categories": [
+        "python",
+        "tools"
+      ],
+      "tags": [
+        "Python",
+        "FFmpeg",
+        "Video",
+        "Audio"
+      ],
+      "image": "https://raw.githubusercontent.com/rad03i2/media-transcoder/main/assets/project-cover.svg",
+      "icon": "https://raw.githubusercontent.com/rad03i2/media-transcoder/main/assets/project-logo.svg",
+      "badge": "NEW 08",
+      "new": true
+    },
+    {
+      "number": "29",
+      "name": "Duplicate Hunter",
+      "repo": "duplicate-hunter",
+      "categories": [
+        "python",
+        "tools"
+      ],
+      "tags": [
+        "Python",
+        "SHA-256",
+        "Files",
+        "CLI"
+      ],
+      "image": "https://raw.githubusercontent.com/rad03i2/duplicate-hunter/main/assets/project-cover.svg",
+      "icon": "https://raw.githubusercontent.com/rad03i2/duplicate-hunter/main/assets/project-logo.svg",
+      "badge": "NEW 09",
+      "new": true
+    },
+    {
+      "number": "30",
+      "name": "Backup Sentinel",
+      "repo": "backup-sentinel",
+      "categories": [
+        "python",
+        "automation",
+        "tools"
+      ],
+      "tags": [
+        "Python",
+        "Backup",
+        "SHA-256",
+        "CLI"
+      ],
+      "image": "https://raw.githubusercontent.com/rad03i2/backup-sentinel/main/assets/project-cover.svg",
+      "icon": "https://raw.githubusercontent.com/rad03i2/backup-sentinel/main/assets/project-logo.svg",
+      "badge": "NEW 10",
+      "new": true
+    },
+    {
+      "number": "31",
+      "name": "ImageOptimizer",
+      "repo": "imageoptimizer",
+      "categories": [
+        "python",
+        "tools"
+      ],
+      "tags": [
+        "Python",
+        "Pillow",
+        "WebP",
+        "Images"
+      ],
+      "image": "https://raw.githubusercontent.com/rad03i2/imageoptimizer/main/assets/project-cover.svg",
+      "icon": "https://raw.githubusercontent.com/rad03i2/imageoptimizer/main/assets/project-logo.svg",
+      "badge": "NEW 11",
+      "new": true
+    },
+    {
+      "number": "32",
+      "name": "Smart Compressor",
+      "repo": "smart-compressor",
+      "categories": [
+        "python",
+        "tools"
+      ],
+      "tags": [
+        "Python",
+        "ZIP",
+        "TAR",
+        "Archives"
+      ],
+      "image": "https://raw.githubusercontent.com/rad03i2/smart-compressor/main/assets/project-cover.svg",
+      "icon": "https://raw.githubusercontent.com/rad03i2/smart-compressor/main/assets/project-logo.svg",
+      "badge": "NEW 12",
+      "new": true
+    },
+    {
+      "number": "33",
+      "name": "Robotics Language Lab",
+      "repo": "robotics-language-lab",
+      "categories": [
+        "robotics",
+        "python",
+        "tools",
+        "iot"
+      ],
+      "tags": [
+        "Python",
+        "C++",
+        "ROS 2",
+        "Arduino"
+      ],
+      "image": "https://raw.githubusercontent.com/rad03i2/robotics-language-lab/main/assets/project-cover.svg",
+      "icon": "https://raw.githubusercontent.com/rad03i2/robotics-language-lab/main/assets/project-logo.svg",
+      "badge": "NEW 13",
+      "new": true
+    },
+    {
+      "number": "34",
+      "name": "MCP Toolbox",
+      "repo": "mcp-toolbox",
+      "categories": [
+        "ai",
+        "python",
+        "tools"
+      ],
+      "tags": [
+        "Python",
+        "MCP",
+        "FastMCP",
+        "Developer Tools"
+      ],
+      "image": "https://raw.githubusercontent.com/rad03i2/mcp-toolbox/main/assets/project-cover.svg",
+      "icon": "https://raw.githubusercontent.com/rad03i2/mcp-toolbox/main/assets/project-logo.svg",
+      "badge": "NEW 14",
+      "new": true
+    },
+    {
+      "number": "35",
+      "name": "Invoice Maker Lite",
+      "repo": "invoice-maker-lite",
+      "categories": [
+        "python",
+        "data",
+        "tools"
+      ],
+      "tags": [
+        "Python",
+        "SQLite",
+        "HTML",
+        "Invoices"
+      ],
+      "image": "https://raw.githubusercontent.com/rad03i2/invoice-maker-lite/main/assets/project-cover.svg",
+      "icon": "https://raw.githubusercontent.com/rad03i2/invoice-maker-lite/main/assets/project-logo.svg",
+      "badge": "NEW 15",
+      "new": true
+    },
+    {
+      "number": "36",
+      "name": "API Mock Studio",
+      "repo": "api-mock-studio",
+      "categories": [
+        "python",
+        "web",
+        "tools"
+      ],
+      "tags": [
+        "Python",
+        "HTTP",
+        "API",
+        "JSON"
+      ],
+      "image": "https://raw.githubusercontent.com/rad03i2/api-mock-studio/main/assets/project-cover.svg",
+      "icon": "https://raw.githubusercontent.com/rad03i2/api-mock-studio/main/assets/project-logo.svg",
+      "badge": "NEW 16",
+      "new": true
+    },
+    {
+      "number": "37",
+      "name": "LLM Cost Tracker",
+      "repo": "llm-cost-tracker",
+      "categories": [
+        "ai",
+        "python",
+        "data"
+      ],
+      "tags": [
+        "Python",
+        "LLM",
+        "JSONL",
+        "Costs"
+      ],
+      "image": "https://raw.githubusercontent.com/rad03i2/llm-cost-tracker/main/assets/project-cover.svg",
+      "icon": "https://raw.githubusercontent.com/rad03i2/llm-cost-tracker/main/assets/project-logo.svg",
+      "badge": "NEW 17",
+      "new": true
+    },
+    {
+      "number": "38",
+      "name": "Codebase Navigator AI",
+      "repo": "codebase-navigator-ai",
+      "categories": [
+        "ai",
+        "python",
+        "tools"
+      ],
+      "tags": [
+        "Python",
+        "AST",
+        "Code Search",
+        "CLI"
+      ],
+      "image": "https://raw.githubusercontent.com/rad03i2/codebase-navigator-ai/main/assets/project-cover.svg",
+      "icon": "https://raw.githubusercontent.com/rad03i2/codebase-navigator-ai/main/assets/project-logo.svg",
+      "badge": "NEW 18",
+      "new": true
+    },
+    {
+      "number": "39",
+      "name": "Privacy Audit",
+      "repo": "privacy-audit",
+      "categories": [
+        "security",
+        "python",
+        "tools"
+      ],
+      "tags": [
+        "Python",
+        "Privacy",
+        "Security",
+        "CLI"
+      ],
+      "image": "https://raw.githubusercontent.com/rad03i2/privacy-audit/main/assets/project-cover.svg",
+      "icon": "https://raw.githubusercontent.com/rad03i2/privacy-audit/main/assets/project-logo.svg",
+      "badge": "NEW 19",
+      "new": true
+    },
+    {
+      "number": "40",
+      "name": "Phishing URL Checker",
+      "repo": "phishing-url-checker",
+      "categories": [
+        "security",
+        "python",
+        "tools"
+      ],
+      "tags": [
+        "Python",
+        "Security",
+        "URLs",
+        "CLI"
+      ],
+      "image": "https://raw.githubusercontent.com/rad03i2/phishing-url-checker/main/assets/project-cover.svg",
+      "icon": "https://raw.githubusercontent.com/rad03i2/phishing-url-checker/main/assets/project-logo.svg",
+      "badge": "NEW 20",
+      "new": true
+    },
+    {
+      "number": "01",
+      "name": "Smart File Manager",
+      "repo": "SmartFileManager",
+      "categories": [
+        "windows",
+        "tools"
+      ],
+      "tags": [
+        "C#",
+        "WinUI 3",
+        ".NET"
+      ]
+    },
+    {
+      "number": "02",
+      "name": "Robotics Language Lab",
+      "repo": "robotics-language-lab",
+      "categories": [
+        "robotics",
+        "tools"
+      ],
+      "tags": [
+        "Python",
+        "C++",
+        "ROS 2"
+      ]
+    },
+    {
+      "number": "03",
+      "name": "Python Toolbox",
+      "repo": "python-toolbox",
+      "categories": [
+        "python",
+        "tools"
+      ],
+      "tags": [
+        "Python",
+        "CLI",
+        "Automation"
+      ]
+    },
+    {
+      "number": "04",
+      "name": "JavaScript Lab",
+      "repo": "javascript-lab",
+      "categories": [
+        "web"
+      ],
+      "tags": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ]
+    },
+    {
+      "number": "05",
+      "name": "AI Tools Lab",
+      "repo": "ai-tools-lab",
+      "categories": [
+        "ai",
+        "python",
+        "web"
+      ],
+      "tags": [
+        "Python",
+        "JavaScript",
+        "AI"
+      ]
+    },
+    {
+      "number": "06",
+      "name": "Desktop Automation Suite",
+      "repo": "desktop-automation-suite",
+      "categories": [
+        "windows",
+        "automation",
+        "tools"
+      ],
+      "tags": [
+        "PowerShell",
+        "C#",
+        "AutoHotkey"
+      ]
+    },
+    {
+      "number": "07",
+      "name": "Windows System Toolkit",
+      "repo": "windows-system-toolkit",
+      "categories": [
+        "windows",
+        "tools"
+      ],
+      "tags": [
+        "Windows",
+        "PowerShell",
+        "C#"
+      ]
+    },
+    {
+      "number": "08",
+      "name": "Arabic UI Components",
+      "repo": "arabic-ui-components",
+      "categories": [
+        "web"
+      ],
+      "tags": [
+        "RTL",
+        "HTML",
+        "CSS"
+      ]
+    },
+    {
+      "number": "09",
+      "name": "Student Management System",
+      "repo": "student-management-system",
+      "categories": [
+        "desktop",
+        "data"
+      ],
+      "tags": [
+        "Java",
+        "SQL",
+        "OOP"
+      ]
+    },
+    {
+      "number": "10",
+      "name": "File Processing Toolkit",
+      "repo": "file-processing-toolkit",
+      "categories": [
+        "python",
+        "tools",
+        "automation"
+      ],
+      "tags": [
+        "Python",
+        "C#",
+        "Bash"
+      ]
+    },
+    {
+      "number": "11",
+      "name": "IoT Sensor Dashboard",
+      "repo": "iot-sensor-dashboard",
+      "categories": [
+        "iot",
+        "web",
+        "data"
+      ],
+      "tags": [
+        "Arduino",
+        "Node.js",
+        "IoT"
+      ]
+    },
+    {
+      "number": "12",
+      "name": "Data Analysis Notebooks",
+      "repo": "data-analysis-notebooks",
+      "categories": [
+        "data",
+        "python"
+      ],
+      "tags": [
+        "Python",
+        "CSV",
+        "Analysis"
+      ]
+    },
+    {
+      "number": "13",
+      "name": "Web Security Lab",
+      "repo": "web-security-lab",
+      "categories": [
+        "web",
+        "security"
+      ],
+      "tags": [
+        "PHP",
+        "JavaScript",
+        "Security"
+      ]
+    },
+    {
+      "number": "14",
+      "name": "Mobile App Starter Kit",
+      "repo": "mobile-app-starter-kit",
+      "categories": [
+        "mobile"
+      ],
+      "tags": [
+        "Kotlin",
+        "Android",
+        "Python"
+      ]
+    },
+    {
+      "number": "15",
+      "name": "C++ Algorithms Lab",
+      "repo": "cpp-algorithms-lab",
+      "categories": [
+        "cpp",
+        "tools"
+      ],
+      "tags": [
+        "C++",
+        "CMake",
+        "Algorithms"
+      ]
+    },
+    {
+      "number": "16",
+      "name": "Python Automation Hub",
+      "repo": "python-automation-hub",
+      "categories": [
+        "python",
+        "automation"
+      ],
+      "tags": [
+        "Python",
+        "Automation",
+        "CLI"
+      ]
+    },
+    {
+      "number": "17",
+      "name": "Fullstack Mini Projects",
+      "repo": "fullstack-mini-projects",
+      "categories": [
+        "web",
+        "data"
+      ],
+      "tags": [
+        "PHP",
+        "JavaScript",
+        "SQL"
+      ]
+    },
+    {
+      "number": "18",
+      "name": "Developer Portfolio",
+      "repo": "developer-portfolio",
+      "categories": [
+        "web"
+      ],
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
+    },
+    {
+      "number": "19",
+      "name": "Portfolio",
+      "repo": "portfolio",
+      "categories": [
+        "web"
+      ],
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
+    },
+    {
+      "number": "20",
+      "name": "RAD / Main Portfolio",
+      "repo": "rad",
+      "categories": [
+        "web"
+      ],
+      "tags": [
+        "Portfolio",
+        "Projects",
+        "RAD"
+      ],
+      "demo": true
+    }
   ]
 }
