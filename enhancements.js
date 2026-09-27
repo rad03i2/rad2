@@ -599,7 +599,7 @@
   function trapFocus(e,root){if(e.key!=='Tab')return;const f=$$('button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])',root).filter(x=>!x.disabled&&!x.hidden);if(!f.length)return;const first=f[0],last=f[f.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}
 
   function revealOnScroll(){const nodes=$$('.enh-reveal');if(!nodes.length)return;if(document.documentElement.classList.contains('enh-reduce-motion')||matchMedia('(prefers-reduced-motion: reduce)').matches){nodes.forEach(n=>n.classList.add('is-visible'));return;}const io=new IntersectionObserver(entries=>entries.forEach(x=>{if(x.isIntersecting){x.target.classList.add('is-visible');io.unobserve(x.target);}}),{threshold:.1,rootMargin:'0px 0px -28px'});nodes.forEach(n=>io.observe(n));}
-  function animateCounters(){const nodes=$$('[data-count]');if(!nodes.length)return;const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,target=Number(el.dataset.count)||0;if(document.documentElement.classList.contains('enh-reduce-motion')){el.textContent=target;io.unobserve(el);return;}let start=0;const s=performance.now(),dur=700;const tick=now=>{const p=Math.min(1,(now-s)/dur);el.textContent=Math.round(start+(target-start)*p);if(p<1)requestAnimationFrame(tick);};requestAnimationFrame(tick);io.unobserve(el);}),{threshold:.6});nodes.forEach(n=>io.observe(n));}
+  function animateCounters(){const nodes=$$('[data-count]');if(!nodes.length)return;const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,target=Number(el.dataset.count)||0;if(document.documentElement.classList.contains('enh-reduce-motion')){el.textContent=target;io.unobserve(el);return;}let start=0;const s=performance.now(),dur=2400;const tick=now=>{const p=Math.min(1,(now-s)/dur);el.textContent=Math.round(start+(target-start)*p);if(p<1)requestAnimationFrame(tick);};requestAnimationFrame(tick);io.unobserve(el);}),{threshold:.6});nodes.forEach(n=>io.observe(n));}
 
   function addMagneticAndSpotlight(){if(!matchMedia('(pointer:fine)').matches)return;$$('.enh-primary,.enh-secondary,.projects-more-button').forEach(el=>{el.addEventListener('mousemove',e=>{if(document.documentElement.classList.contains('enh-reduce-motion'))return;const r=el.getBoundingClientRect();const x=(e.clientX-r.left-r.width/2)*.08,y=(e.clientY-r.top-r.height/2)*.08;el.style.transform=`translate(${x}px,${y}px)`;});el.addEventListener('mouseleave',()=>el.style.transform='');});$$('.showcase-card,.enh-service').forEach(el=>el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect();el.style.setProperty('--mx',`${e.clientX-r.left}px`);el.style.setProperty('--my',`${e.clientY-r.top}px`);}));}
 
@@ -818,7 +818,7 @@
       return;
     }
     const started = performance.now();
-    const duration = 1050;
+    const duration = 3200;
     const tick = now => {
       const progress = Math.min(1, (now - started) / duration);
       const eased = 1 - Math.pow(1 - progress, 3);
