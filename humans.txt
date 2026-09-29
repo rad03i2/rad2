@@ -8,3 +8,7 @@ Facebook: https://www.facebook.com/rad03e
 /* SITE */
 Languages: Arabic, English
 Technologies: HTML, CSS, JavaScript
+
+/* RELATED PUBLICATION */
+Mikhbar / مِخبار: https://mikhbar.website/
+Reference: https://rdwan.dev/mikhbar.html
