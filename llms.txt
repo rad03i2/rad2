@@ -18,6 +18,8 @@ Official software developer portfolio: https://rdwan.dev/
 - Technical notes: https://rdwan.dev/notes/
 - Sitemap: https://rdwan.dev/sitemap.xml
 - RSS: https://rdwan.dev/feed.xml
+- Mikhbar / مِخبار reference: https://rdwan.dev/mikhbar.html
+- Mikhbar official website: https://mikhbar.website/
 
 ## Technical articles
 - [Building Smart File Manager with C# and WinUI 3](https://rdwan.dev/blog/smart-file-manager-csharp-winui3.html) — Batch rename previews, duplicate detection using size grouping and SHA-256, and Windows desktop structure.
