@@ -1,0 +1,57 @@
+name: Notify IndexNow — Mikhbar Migration Reference
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'mikhbar.html'
+      - 'forum/**'
+      - '404.html'
+      - 'sitemap.xml'
+      - 'sitemap-main.xml'
+      - '.github/workflows/indexnow-mikhbar-reference.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify public IndexNow key
+        run: |
+          KEY="$(tr -d '\r\n ' < ff7de3f199bfcac8fda652aec7caabcd.txt)"
+          test "$KEY" = "ff7de3f199bfcac8fda652aec7caabcd"
+
+      - name: Submit Mikhbar migration reference URLs
+        shell: bash
+        run: |
+          cat > /tmp/indexnow.json <<'JSON'
+          {
+            "host": "rdwan.dev",
+            "key": "ff7de3f199bfcac8fda652aec7caabcd",
+            "keyLocation": "https://rdwan.dev/ff7de3f199bfcac8fda652aec7caabcd.txt",
+            "urlList": [
+              "https://rdwan.dev/mikhbar.html",
+              "https://rdwan.dev/forum/",
+              "https://rdwan.dev/forum/ar/",
+              "https://rdwan.dev/forum/en/",
+              "https://rdwan.dev/sitemap.xml"
+            ]
+          }
+          JSON
+
+          status="$(curl -sS -o /tmp/indexnow-response -w '%{http_code}' \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            --data-binary @/tmp/indexnow.json \
+            https://api.indexnow.org/indexnow)"
+          cat /tmp/indexnow-response || true
+          echo "IndexNow HTTP status: $status"
+          case "$status" in
+            200|202) ;;
+            *) exit 1 ;;
+          esac
