@@ -1,0 +1,49 @@
+name: Temporary Mikhbar Migration CI
+
+on:
+  push:
+    branches:
+      - seo/mikhbar-brand-consolidation
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate static Mikhbar migration pages
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          root = Path(".")
+          pages = sorted((root / "forum").rglob("index.html"))
+          assert len(pages) >= 30, len(pages)
+          errors = []
+          for page in pages:
+              text = page.read_text(encoding="utf-8")
+              m = re.search(r'<link rel="canonical" href="([^"]+)"', text)
+              if not m or not m.group(1).startswith("https://mikhbar.website/"):
+                  errors.append(f"{page}: bad canonical")
+              if '<meta http-equiv="refresh" content="0; url=https://mikhbar.website/' not in text:
+                  errors.append(f"{page}: no instant meta refresh")
+              if "location.replace" not in text:
+                  errors.append(f"{page}: no JS fallback")
+
+          not_found = Path("404.html").read_text(encoding="utf-8")
+          assert 'id="mikhbar-legacy-fallback"' in not_found
+          assert "p.startsWith('/forum/')" in not_found
+          assert "'https://mikhbar.website'" in not_found
+
+          home = Path("index.html").read_text(encoding="utf-8")
+          assert 'href="https://mikhbar.website/"' in home
+          assert "مِخبار — Mikhbar" in home
+
+          if errors:
+              raise SystemExit("\n".join(errors))
+          print(f"Validated {len(pages)} legacy Mikhbar redirect pages")
+          PY
